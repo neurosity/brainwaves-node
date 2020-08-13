@@ -1,0 +1,35 @@
+{
+  "name": "git-push-with-your-mind",
+  "version": "1.0.0",
+  "description": "🚀 Git push, but with your mind 🤯",
+  "main": "index.js",
+  "bin": {
+    "git-push-with-your-mind": "./bin/git-push-with-your-mind"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurosity/git-push-with-your-mind.git"
+  },
+  "keywords": [
+    "git",
+    "neurosity",
+    "push",
+    "mind",
+    "eeg"
+  ],
+  "author": "Alex Castillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neurosity/git-push-with-your-mind/issues"
+  },
+  "homepage": "https://github.com/neurosity/git-push-with-your-mind#readme",
+  "dependencies": {
+    "@neurosity/notion": "^5.0.0-rc.7",
+    "dotenv": "^8.2.0",
+    "rxjs": "^6.6.2",
+    "yargs": "^15.4.1"
+  }
+}
