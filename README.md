@@ -1,6 +1,21 @@
-# 🚀 Git push, but with your mind 🤯
+# Neurosity Brainwaves in Node 🤯
 
-This Node.js application _securely_ authenticates to your Neurosity headset and executes a `git push -u origin master` when the "push" thought is detected by the [Kinesis API](https://docs.neurosity.co/docs/api/kinesis).
+Quickly get started streaming brainwave data in Node via the [notion-js](https://github.com/neurosity/notion-js) API.
+
+```
+const { Notion } = require("@neurosity/notion");
+const { email, password } = require("./auth");
+
+(async function main() {
+  const mind = new Notion();
+  await mind.login({ email, password }).catch(console.error);
+
+  // mind.brainwaves("psd")
+  mind.brainwaves("raw").subscribe((brainwaves) => {
+    console.log(brainwaves);
+  });
+})();
+```
 
 > 💡 You'll need a [Neurosity account](https://console.neurosity.co).
 
