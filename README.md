@@ -2,7 +2,7 @@
 
 Quickly get started streaming brainwave data in Node via the [notion-js](https://github.com/neurosity/notion-js) API.
 
-```
+```js
 const { Notion } = require("@neurosity/notion");
 const { email, password } = require("./auth");
 
