@@ -1,7 +1,7 @@
 const { Notion } = require("@neurosity/notion");
 const { fft, powerByBand, pickChannels } = require("@neurosity/pipes");
 const { pluck } = require("rxjs/operators");
-const { email, password } = require("./auth");
+const { email, password } = require("./inputs");
 const { averageChannels, relativeBandPower } = require("./pipes");
 
 (async function main() {
@@ -12,12 +12,12 @@ const { averageChannels, relativeBandPower } = require("./pipes");
     .brainwaves("raw")
     .pipe(
       pickChannels({
-        channels: [4, 8] // Pick CP3 and CP4
+        channels: [4, 8], // Pick CP3 and CP4
       }),
       fft(),
       powerByBand({
         lowAlpha: [8, 10],
-        highAlpha: [10, 12]
+        highAlpha: [10, 12],
       }),
       averageChannels(),
       relativeBandPower(),

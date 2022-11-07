@@ -1,5 +1,5 @@
 const { Notion } = require("@neurosity/notion");
-const { email, password } = require("./auth");
+const { email, password } = require("./inputs");
 const { timer } = require("rxjs");
 const { switchMap, scan } = require("rxjs/operators");
 
@@ -21,7 +21,7 @@ const switchInterval = 500; // switch kinesis label every x ms
       scan(
         (acc, { label, probability }) => ({
           ...acc,
-          [label]: probability
+          [label]: probability,
         }),
         initialKinesis
       )

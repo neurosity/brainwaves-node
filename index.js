@@ -1,8 +1,8 @@
 const { Notion } = require("@neurosity/notion");
-const { email, password } = require("./auth");
+const { email, password, deviceId } = require("./inputs");
 
 (async function main() {
-  const mind = new Notion();
+  const mind = new Notion(deviceId ? { deviceId } : {});
   await mind.login({ email, password }).catch(console.error);
 
   // mind.brainwaves("psd")
