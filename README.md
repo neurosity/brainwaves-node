@@ -31,6 +31,13 @@ Run in the terminal:
 node index.js --email=NEUROSITY_EMAIL --password=NEUROSITY_PASSWORD
 ```
 
+Another way to provide credentials is to create a `.env` file on the root of the repo and add:
+
+```
+NEUROSITY_EMAIL=*******
+NEUROSITY_PASSWORD=********
+```
+
 ### MIT License
 
 Copyright 2020 Alex Castillo, Neurosity
