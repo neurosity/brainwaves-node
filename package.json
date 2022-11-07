@@ -23,7 +23,7 @@
   "homepage": "https://github.com/neurosity/brainwaves-node#readme",
   "dependencies": {
     "@neurosity/notion": "^5.17.0",
-    "@neurosity/pipes": "^4.3.0",
+    "@neurosity/pipes": "^5.1.1",
     "dotenv": "^8.2.0",
     "rxjs": "^6.6.3",
     "yargs": "^15.4.1"
