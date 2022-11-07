@@ -38,6 +38,24 @@ NEUROSITY_EMAIL=*******
 NEUROSITY_PASSWORD=********
 ```
 
+## Specify a Device ID (optional)
+
+If you only have 1 Crown, you can skip this step.
+
+With multiple Crowns, by default, the Neurosity SDK will select the oldest device on your account. If you wish to specify a device by id, you can do the following:
+
+```
+node index.js --email=NEUROSITY_EMAIL --password=NEUROSITY_PASSWORD --deviceId=NEUROSITY_DEVICE_ID
+```
+
+or add it to the `.env` file:
+
+```
+NEUROSITY_EMAIL=*******
+NEUROSITY_PASSWORD=********
+NEUROSITY_DEVICE_ID=********
+```
+
 ### MIT License
 
 Copyright 2020 Alex Castillo, Neurosity
